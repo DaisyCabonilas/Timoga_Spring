@@ -99,20 +99,20 @@
   </div>
 
   <script>
-    // Toggle password visibility
+    
     document.getElementById('togglePassword').addEventListener('click', function () {
       const passwordInput = document.getElementById('password');
       const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
       passwordInput.setAttribute('type', type);
     });
 
-    // Hardcoded credentials
+   
     const savedUsername = "user@timoga.com";
     const savedPassword = "Timoga123";
 
-    // Form submission and login validation
+   
     document.querySelector('form').addEventListener('submit', function (e) {
-      e.preventDefault(); // Stop form from submitting
+      e.preventDefault(); 
 
       const enteredUsername = document.getElementById('email').value;
       const enteredPassword = document.getElementById('password').value;
@@ -124,7 +124,7 @@
 
       if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
         alert("Login successful! Redirecting...");
-        window.location.href = "huhu.html"; // Change this to your success page
+        window.location.href = "huhu.html";  
       } else {
         alert("Invalid email or password.");
       }
