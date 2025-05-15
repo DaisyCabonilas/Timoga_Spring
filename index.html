@@ -18,6 +18,9 @@
     .btn-login:hover {
       transform: translateY(-2px);
     }
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body class="font-sans bg-blue-50">
@@ -28,11 +31,12 @@
           <div class="flex justify-center mb-4">
             <img src="logo.JPEG" alt="Timoga Springs Logo" class="h-16 w-16 object-contain rounded-full border-2 border-white">
           </div>
-          <h2 class="text-3xl font-bold text-white">Welcome Back</h2>
-          <p class="text-blue-100 mt-2">Sign in to your Timoga Springs account</p>
+          <h2 class="text-3xl font-bold text-white" id="form-title">Welcome Back</h2>
+          <p class="text-blue-100 mt-2" id="form-subtitle">Sign in to your Timoga Springs account</p>
         </div>
 
-        <form class="px-8 py-6">
+        
+        <form id="login-form" class="px-8 py-6">
           <div class="mb-5">
             <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
             <div class="relative">
@@ -80,9 +84,79 @@
           </button>
         </form>
 
+         
+        <form id="signup-form" class="px-8 py-6 hidden">
+          <div class="mb-5">
+            <label for="signup-name" class="block text-gray-700 text-sm font-medium mb-2">Full Name</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <input id="signup-name" name="name" type="text" required 
+                     class="form-input pl-10 w-full py-3 rounded-lg border border-gray-300 focus:outline-none transition duration-300" 
+                     placeholder="Your Name">
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label for="signup-email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <input id="signup-email" name="email" type="email" required 
+                     class="form-input pl-10 w-full py-3 rounded-lg border border-gray-300 focus:outline-none transition duration-300" 
+                     placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label for="signup-password" class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <input id="signup-password" name="password" type="password" required minlength="6"
+                     class="form-input pl-10 w-full py-3 rounded-lg border border-gray-300 focus:outline-none transition duration-300" 
+                     placeholder="••••••••">
+              <button type="button" class="absolute right-3 top-3 text-gray-400 hover:text-gray-600" id="toggleSignupPassword">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="signup-confirm-password" class="block text-gray-700 text-sm font-medium mb-2">Confirm Password</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <input id="signup-confirm-password" name="confirm-password" type="password" required minlength="6"
+                     class="form-input pl-10 w-full py-3 rounded-lg border border-gray-300 focus:outline-none transition duration-300" 
+                     placeholder="••••••••">
+            </div>
+          </div>
+
+          <button type="submit" 
+                  class="btn-login w-full bg-gradient-to-r from-blue-500 to-teal-500 text-white py-3 px-4 rounded-lg font-medium shadow-md hover:shadow-lg transition duration-300 transform">
+            Create Account
+          </button>
+        </form>
+
         <div class="bg-gray-50 px-8 py-6 text-center">
-          <p class="text-gray-600 text-sm">Don't have an account? 
-            <a href="#" class="font-medium text-blue-600 hover:text-blue-800">Sign up</a>
+          <p class="text-gray-600 text-sm" id="toggle-form-text">Don't have an account? 
+            <a href="#" class="font-medium text-blue-600 hover:text-blue-800" id="toggle-form-link">Sign up</a>
           </p>
         </div>
       </div>
@@ -106,28 +180,118 @@
       passwordInput.setAttribute('type', type);
     });
 
-   
-    const savedUsername = "user@timoga.com";
-    const savedPassword = "Timoga123";
+    document.getElementById('toggleSignupPassword').addEventListener('click', function () {
+      const passwordInput = document.getElementById('signup-password');
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+    });
 
    
-    document.querySelector('form').addEventListener('submit', function (e) {
-      e.preventDefault(); 
+    const toggleFormLink = document.getElementById('toggle-form-link');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+    const formTitle = document.getElementById('form-title');
+    const formSubtitle = document.getElementById('form-subtitle');
+    const toggleFormText = document.getElementById('toggle-form-text');
 
-      const enteredUsername = document.getElementById('email').value;
-      const enteredPassword = document.getElementById('password').value;
+    toggleFormLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      if (loginForm.classList.contains('hidden')) {
+        
+        loginForm.classList.remove('hidden');
+        signupForm.classList.add('hidden');
+        formTitle.textContent = 'Welcome Back';
+        formSubtitle.textContent = 'Sign in to your Timoga Springs account';
+        toggleFormText.innerHTML = 'Don\'t have an account? <a href="#" class="font-medium text-blue-600 hover:text-blue-800" id="toggle-form-link">Sign up</a>';
+      } else {
+        
+        loginForm.classList.add('hidden');
+        signupForm.classList.remove('hidden');
+        formTitle.textContent = 'Create Account';
+        formSubtitle.textContent = 'Join Timoga Springs today';
+        toggleFormText.innerHTML = 'Already have an account? <a href="#" class="font-medium text-blue-600 hover:text-blue-800" id="toggle-form-link">Sign in</a>';
+      }
+      
+      
+      document.getElementById('toggle-form-link').addEventListener('click', arguments.callee);
+    });
 
-      if (!enteredUsername || !enteredPassword) {
-        alert('Please fill in all fields');
+    
+    if (!localStorage.getItem('users')) {
+     
+      const defaultUser = {
+        email: "guest@timoga.com",
+        password: "",  
+        name: "Guest User"
+      };
+      localStorage.setItem('users', JSON.stringify([defaultUser]));
+    }
+
+     
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const enteredEmail = document.getElementById('email').value;
+      
+     
+  const users = JSON.parse(localStorage.getItem('users'));
+      
+       
+      const user = users.find(u => u.email === enteredEmail);
+      
+      if (user) {
+        alert("Login successful! Redirecting...");
+        window.location.href = "huhu.html";
+      } else {
+        alert("Email not found. Please sign up first.");
+      }
+    });
+
+    
+    document.getElementById('signup-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('signup-name').value;
+      const email = document.getElementById('signup-email').value;
+      const password = document.getElementById('signup-password').value;
+      const confirmPassword = document.getElementById('signup-confirm-password').value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords don't match!");
         return;
       }
 
-      if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
-        alert("Login successful! Redirecting...");
-        window.location.href = "huhu.html";  
-      } else {
-        alert("Invalid email or password.");
+    
+      const users = JSON.parse(localStorage.getItem('users'));
+      
+      
+      if (users.some(u => u.email === email)) {
+        alert("Email already registered. Please sign in.");
+        return;
       }
+
+      
+      const newUser = {
+        name: name,
+        email: email,
+        password: password  
+      };
+      
+      users.push(newUser);
+      localStorage.setItem('users', JSON.stringify(users));
+      
+      alert("Account created successfully! You can now sign in.");
+      
+      
+      loginForm.classList.remove('hidden');
+      signupForm.classList.add('hidden');
+      formTitle.textContent = 'Welcome Back';
+      formSubtitle.textContent = 'Sign in to your Timoga Springs account';
+      toggleFormText.innerHTML = 'Don\'t have an account? <a href="#" class="font-medium text-blue-600 hover:text-blue-800" id="toggle-form-link">Sign up</a>';
+      
+       
+      document.getElementById('toggle-form-link').addEventListener('click', toggleFormLink.onclick);
     });
   </script>
 </body>
