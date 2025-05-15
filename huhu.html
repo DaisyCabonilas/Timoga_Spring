@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timoga Springs - Iligan's Natural Paradise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --spring-primary: #06B6D4;
+      --spring-secondary: #4FD1C5;
+      --spring-dark: #0E7490;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('"D:\daisy webpage\logo.JPEG"');
+    }
+    .text-spring {
+      color: var(--spring-primary);
+    }
+    .bg-spring {
+      background-color: var(--spring-primary);
+    }
+    .border-spring {
+      border-color: var(--spring-primary);
+    }
+    .btn-spring {
+      background: linear-gradient(to right, var(--spring-primary), var(--spring-secondary));
+      transition: all 0.3s ease;
+    }
+    .btn-spring:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.4);
+    }
+    .gallery-img {
+      transition: transform 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--spring-primary);
+      margin: 15px auto;
+    }
+
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex items-center">
+          <img src="logo.JPEG" alt="Timoga Logo" class="h-12 w-12 rounded-full mr-3">
+          <span class="text-2xl font-bold text-spring">Timoga Springs</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="text-gray-700 hover:text-spring font-medium">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-spring font-medium">About</a>
+          <a href="#pools" class="text-gray-700 hover:text-spring font-medium">Pools</a>
+          <a href="#gallery" class="text-gray-700 hover:text-spring font-medium">Gallery</a>
+          <a href="#contact" class="text-gray-700 hover:text-spring font-medium">Contact</a>
+          <a href="#visit" class="px-4 py-2 rounded-full btn-spring text-white font-medium">Plan Visit</a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden pb-4 px-4 bg-white">
+      <a href="#home" class="block py-2 text-gray-700 hover:text-spring">Home</a>
+      <a href="#about" class="block py-2 text-gray-700 hover:text-spring">About</a>
+      <a href="#pools" class="block py-2 text-gray-700 hover:text-spring">Pools</a>
+      <a href="#gallery" class="block py-2 text-gray-700 hover:text-spring">Gallery</a>
+      <a href="#contact" class="block py-2 text-gray-700 hover:text-spring">Contact</a>
+      <a href="#visit" class="block mt-2 px-4 py-2 rounded-full btn-spring text-white text-center">Plan Visit</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-bg bg-cover bg-center h-screen flex items-center justify-center text-white">
+    <div class="text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Discover Timoga Springs</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Experience the crystal-clear natural spring waters of Iligan City</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#pools" class="px-8 py-3 rounded-full btn-spring text-white font-medium">Explore Pools</a>
+        <a href="#visit" class="px-8 py-3 rounded-full bg-white text-spring font-medium border border-spring hover:bg-gray-100">Plan Your Visit</a>
+      </div>
+    </div>
+    
+    <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title">About Timoga Springs</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4">A hidden gem in Northern Mindanao</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <img src= "Pic6.JPEG" alt="Timoga Springs" class="rounded-xl shadow-xl w-full">
+        </div>
+        <div class="md:w-1/2">
+          <p class="text-lg text-gray-600 mb-6">
+            Timoga Springs is a collection of natural spring water pools located in Barangay Buru-un, Iligan City. Known for its crystal-clear, cold waters that flow directly from the mountains, Timoga offers a refreshing escape from the tropical heat.
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            The springs feature several privately-owned pools with varying depths, perfect for both children and adults. The water maintains a cool temperature year-round, making it an ideal destination no matter the season.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-center">
+              <div class="bg-blue-50 p-3 rounded-full mr-3">
+                <svg class="h-6 w-6 text-spring" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <span>Refreshing Waters</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-blue-50 p-3 rounded-full mr-3">
+                <svg class="h-6 w-6 text-spring" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657a8 8 0 01-11.314 0m11.314 0a8 8 0 01-11.314 0m11.314 0L21 21m-4-4h.01M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span>Scenic Views</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-blue-50 p-3 rounded-full mr-3">
+                <svg class="h-6 w-6 text-spring" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <span>Family Friendly</span>
+            </div>
+            <div class="flex items-center">
+              <div class="bg-blue-50 p-3 rounded-full mr-3">
+                <svg class="h-6 w-6 text-spring" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span>Open Year-Round</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pools Section -->
+  <section id="pools" class="py-20 bg-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title">Our Spring Pools</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4">Choose from our variety of refreshing pools</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pool 1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:-translate-y-2">
+          <img src="D:\daisy webpage\main.jpeg" alt="Main Pool" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Main Pool</h3>
+            <p class="text-gray-600 mb-4">Our largest pool with varying depths perfect for all ages.</p>
+            <div class="flex items-center text-yellow-400 mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="text-gray-600 ml-2">4.5</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-spring">₱50/person</span>
+              <button class="text-sm bg-spring text-white px-4 py-2 rounded-full hover:bg-spring-dark">Details</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pool 2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:-translate-y-2">
+          <img src="kids.JPEG" alt="Kids Pool" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Kids Pool</h3>
+            <p class="text-gray-600 mb-4">Shallow pool designed specifically for children's safety.</p>
+            <div class="flex items-center text-yellow-400 mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="text-gray-600 ml-2">4.0</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-spring">₱30/child</span>
+              <button class="text-sm bg-spring text-white px-4 py-2 rounded-full hover:bg-spring-dark">Details</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pool 3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:-translate-y-2">
+          <img src="PRIVATE1.JPEG " alt="Private Pool" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Private Pool</h3>
+            <p class="text-gray-600 mb-4">Exclusive pool area for groups and special occasions.</p>
+            <div class="flex items-center text-yellow-400 mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="text-gray-600 ml-2">5.0</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-spring">₱1,500/hour</span>
+              <button class="text-sm bg-spring text-white px-4 py-2 rounded-full hover:bg-spring-dark">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title">Photo Gallery</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4">See the beauty of Timoga through these photos</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\daisy webpage\pic1.JPEG" alt="Timoga Pool" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\IMG_0938.JPEG" alt="Nature" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\timoga-cold-springs.JPEG" alt="Spring" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\daisy webpage\pic4.JPEG" alt="Spring" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\daisy webpage\pic5.JPEG" alt="Spring" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\daisy webpage\Pic6.JPEG" alt="Spring" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\daisy webpage\PIC7.JPEG" alt="Spring" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\daisy webpage\PIC8.JPEG" alt="Spring" class="w-full h-64 object-cover">
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md gallery-img">
+          <img src="D:\daisy webpage\PIC9.JPEG" alt="Spring" class="w-full h-64 object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit Section -->
+  <section id="visit" class="py-20 bg-spring text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Plan Your Visit</h2>
+        <p class="text-blue-100 max-w-3xl mx-auto">Everything you need to know before visiting Timoga Springs</p>
+      </div>
+    
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Hours & Admission</h3>
+          
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl mb-6">
+            <h4 class="text-xl font-semibold mb-3">Opening Hours</h4>
+            <ul class="space-y-2">
+              <li class="flex justify-between">
+                <span>Monday - Friday</span>
+                <span>8:00 AM - 6:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Saturday - Sunday</span>
+                <span>7:00 AM - 7:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Holidays</span>
+                <span>7:00 AM - 7:00 PM</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <h4 class="text-xl font-semibold mb-3">Entrance Fees</h4>
+            <ul class="space-y-3">
+              <li class="flex justify-between">
+                <span>Adults</span>
+                <span>₱50</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Children (3-12 yrs)</span>
+                <span>₱30</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Senior Citizens</span>
+                <span>₱40</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Private Pool Rental</span>
+                <span>₱1,500/hour</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Location & Directions</h3>
+          
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl mb-6">
+            <h4 class="text-xl font-semibold mb-3">Address</h4>
+            <p class="mb-4">Timoga Spring Pools, Buru-un, Iligan City, Lanao del Norte, Philippines</p>
+            <a href="#" class="inline-flex items-center text-blue-200 hover:text-white">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              View on Google Maps
+            </a>
+          </div>
+          
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <h4 class="text-xl font-semibold mb-3">How to Get There</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-bus mt-1 mr-3 text-blue-200"></i>
+                <span>From Iligan City proper, take a jeepney bound for Buru-un (15-20 minute ride)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-car mt-1 mr-3 text-blue-200"></i>
+                <span>By private vehicle: Follow the national highway towards Buru-un, approximately 10km from city center</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-info-circle mt-1 mr-3 text-blue-200"></i>
+                <span>Look for signage along the highway indicating the entrance to Timoga Springs</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 section-title">Contact Us</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto mt-4">Have questions? We'd love to hear from you!</p>
+      </div>
+      
+      <div class="bg-blue-50 rounded-xl shadow-lg p-8">
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spring focus:border-transparent transition duration-300" placeholder="John Doe">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spring focus:border-transparent transition duration-300" placeholder="your@email.com">
+            </div>
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spring focus:border-transparent transition duration-300" placeholder="Your subject">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-spring focus:border-transparent transition duration-300" placeholder="Type your message here..."></textarea>
+          </div>
+          <div>
+            <button type="submit" class="w-full bg-spring hover:bg-spring-dark text-white font-medium py-3 px-6 rounded-lg transition duration-300 shadow-md">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 rounded-xl bg-blue-50">
+          <div class="flex justify-center mb-4">
+            <i class="fas fa-map-marker-alt text-3xl text-spring"></i>
+          </div>
+          <h4 class="text-lg font-semibold mb-2">Location</h4>
+          <p class="text-gray-600">Bur-un, Iligan City, Philippines</p>
+        </div>
+        <div class="p-6 rounded-xl bg-blue-50">
+          <div class="flex justify-center mb-4">
+            <i class="fas fa-phone-alt text-3xl text-spring"></i>
+          </div>
+          <h4 class="text-lg font-semibold mb-2">Phone</h4>
+          <p class="text-gray-600">+63 123 456 7890</p>
+        </div>
+        <div class="p-6 rounded-xl bg-blue-50">
+          <div class="flex justify-center mb-4">
+            <i class="fas fa-envelope text-3xl text-spring"></i>
+          </div>
+          <h4 class="text-lg font-semibold mb-2">Email</h4>
+          <p class="text-gray-600">info@timogasprings.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="logo.JPEG" alt="Timoga Springs Logo" class="h-10 w-10 rounded-full" />
+            <h3 class="text-xl font-bold text-spring">Timoga Springs</h3>
+          </div>
+          <p class="text-gray-400">A natural paradise offering refreshing spring waters in Iligan City.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-spring">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+            <li><a href="#pools" class="text-gray-400 hover:text-white transition duration-300">Pools</a></li>
+            <li><a href="#gallery" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-spring">Contact Info</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start space-x-2">
+              <i class="fas fa-map-marker-alt mt-1 text-spring"></i>
+              <span>Bur-un, Iligan City, Philippines</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-phone-alt text-spring"></i>
+              <span>+63 123 456 7890</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-envelope text-spring"></i>
+              <span>info@timogasprings.com</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-spring">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-gray-800 hover:bg-spring text-white p-3 rounded-full transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-spring text-white p-3 rounded-full transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="bg-gray-800 hover:bg-spring text-white p-3 rounded-full transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2023 Timoga Springs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        // Close mobile menu if open
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+    
+    // Form validation
+    document.querySelector('form').addEventListener('submit', function(e) {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !email || !message) {
+        e.preventDefault();
+        alert('Please fill in all required fields');
+      }
+    });
+  </script>
+</body>
+</html>

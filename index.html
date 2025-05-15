@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Timoga Springs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .login-container {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?spring,water,nature');
+      background-size: cover;
+      background-position: center;
+    }
+    .form-input:focus {
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+    }
+    .btn-login:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="font-sans bg-blue-50">
+  <div class="min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="login-container py-8 px-6 text-center">
+          <div class="flex justify-center mb-4">
+            <img src="D:\daisy webpage\logo.JPEG" alt="Timoga Springs Logo" class="h-16 w-16 object-contain rounded-full border-2 border-white">
+          </div>
+          <h2 class="text-3xl font-bold text-white">Welcome Back</h2>
+          <p class="text-blue-100 mt-2">Sign in to your Timoga Springs account</p>
+        </div>
+
+        <form class="px-8 py-6">
+          <div class="mb-5">
+            <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <input id="email" name="email" type="email" required 
+                     class="form-input pl-10 w-full py-3 rounded-lg border border-gray-300 focus:outline-none transition duration-300" 
+                     placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="password" class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <input id="password" name="password" type="password" required minlength="6"
+                     class="form-input pl-10 w-full py-3 rounded-lg border border-gray-300 focus:outline-none transition duration-300" 
+                     placeholder="••••••••">
+              <button type="button" class="absolute right-3 top-3 text-gray-400 hover:text-gray-600" id="togglePassword">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <div class="flex items-center">
+                <input id="remember" name="remember" type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+                <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
+              </div>
+              <a href="#" class="text-sm text-blue-500 hover:text-blue-700">Forgot password?</a>
+            </div>
+          </div>
+
+          <button type="submit" 
+                  class="btn-login w-full bg-gradient-to-r from-blue-500 to-teal-500 text-white py-3 px-4 rounded-lg font-medium shadow-md hover:shadow-lg transition duration-300 transform">
+            Sign In
+          </button>
+        </form>
+
+        <div class="bg-gray-50 px-8 py-6 text-center">
+          <p class="text-gray-600 text-sm">Don't have an account? 
+            <a href="#" class="font-medium text-blue-600 hover:text-blue-800">Sign up</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+          <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to home
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    document.getElementById('togglePassword').addEventListener('click', function () {
+      const passwordInput = document.getElementById('password');
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+    });
+
+    // Hardcoded credentials
+    const savedUsername = "user@timoga.com";
+    const savedPassword = "Timoga123";
+
+    // Form submission and login validation
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault(); // Stop form from submitting
+
+      const enteredUsername = document.getElementById('email').value;
+      const enteredPassword = document.getElementById('password').value;
+
+      if (!enteredUsername || !enteredPassword) {
+        alert('Please fill in all fields');
+        return;
+      }
+
+      if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
+        alert("Login successful! Redirecting...");
+        window.location.href = "huhu.html"; // Change this to your success page
+      } else {
+        alert("Invalid email or password.");
+      }
+    });
+  </script>
+</body>
+</html>

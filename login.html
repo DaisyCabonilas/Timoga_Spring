@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url(pic1.JPEG);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(184, 175, 198, 0.294);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #7f8085ae;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+    }
+
+    .error {
+      color: red;
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .forgot-link {
+      text-align: center;
+      display: block;
+      margin-top: 0.5rem;
+      color: #000000ab;
+      cursor: pointer;
+    }
+
+    .forgot-output {
+      margin-top: 1rem;
+      color: #444;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Login</h2>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <span class="forgot-link" onclick="handleForgot()">Forgot Password?</span>
+    <button type="submit">Log In</button>
+    <p id="error-message" class="error">Invalid credentials. Access denied.</p>
+    <p id="forgot-output" class="forgot-output"></p>
+  </form>
+</div>
+
+<script>
+  // Simulated saved account
+  const savedUsername = "timogauser";
+  const savedPassword = "timogapass";
+
+  const form = document.getElementById("login-form");
+  const usernameField = document.getElementById("username");
+  const passwordField = document.getElementById("password");
+  const errorMessage = document.getElementById("error-message");
+  const forgotOutput = document.getElementById("forgot-output");
+
+  
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const enteredUsername = usernameField.value;
+    const enteredPassword = passwordField.value;
+
+    if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
+      alert("Login successful! Redirecting...");
+      window.location.href = "huhu.html"; // You can replace with your real page
+    } else {
+      errorMessage.style.display = "block";
+      forgotOutput.innerHTML = "";
+    }
+  });
+
+  function handleForgot() {
+    forgotOutput.innerHTML = "To recover your password, please contact support or check your registered email.";
+    errorMessage.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
